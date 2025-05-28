@@ -1,0 +1,188 @@
+
+        
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --accent: #e74c3c;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --warning: #f39c12;
+            --info: #9b59b6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        h1 {
+            color: var(--dark);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        
+        .topic-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+            transition: all 0.4s ease;
+            animation: slideUp 0.6s ease-out;
+            overflow: hidden;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Different border colors for each topic */
+        .topic-1 {
+            border-left-color: var(--primary);
+        }
+        .topic-2 {
+            border-left-color: var(--secondary);
+            animation-delay: 0.1s;
+        }
+        .topic-3 {
+            border-left-color: var(--accent);
+            animation-delay: 0.2s;
+        }
+        .topic-4 {
+            border-left-color: var(--warning);
+            animation-delay: 0.3s;
+        }
+
+        h2 {
+            color: var(--dark);
+            font-size: 1.8rem;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed rgba(0,0,0,0.1);
+        }
+
+        /* Animated Headings */
+        .section-heading {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin: 20px 0 10px;
+            padding-left: 10px;
+            border-left: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .section-heading:hover {
+            padding-left: 15px;
+            color: var(--accent);
+        }
+
+        .sub-heading {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin: 15px 0 8px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        /* Animated List Items */
+        .content-list {
+            padding-left: 25px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .list-item {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+            transition: all 0.2s ease;
+        }
+
+        .list-item:hover {
+            transform: translateX(5px);
+        }
+
+        .list-item:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .list-item:hover:before {
+            color: var(--warning);
+            transform: scale(1.3);
+        }
+
+        /* Special styling for starred items */
+        .star-item {
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        /* Note styling with animation */
+        .info-note {
+            display: inline-block;
+            background-color: var(--light);
+            color: var(--dark);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin: 5px 0;
+            font-style: italic;
+            animation: pulse 2s infinite;
+        }
+
+        /* Sub-topic with animation */
+        .sub-topic {
+            background-color: rgba(236, 240, 241, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid var(--info);
+            transition: all 0.3s ease;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .sub-topic:hover {
+            background-color: rgba(236, 240, 241, 0.8);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+       
+    
