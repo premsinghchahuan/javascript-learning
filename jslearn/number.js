@@ -71,34 +71,93 @@ console.log(Number.isSafeInteger(Infinity));
 console.log(Number.isSafeInteger(3.0));
 
                          //parseFloat()	                                                  Converts the numeric floating string to a floating-point number.
-
-
-
+console.log(parseFloat("19.0119"));
+console.log(parseFloat("37"));
+console.log(parseFloat("2938.4ldjf"));
                          //parseInt()                                                  	Converts the numeric string to an integer.
+                         const stringDate = "1996";
 
+                         // parse the string to decimal
+                         let intDate = parseInt(stringDate,10);
+                         console.log(intDate);
+                         
+                         //ex2
+                         const stringDats = "1996";
+
+                         // parse the string to decimal
+                         let intDats = parseInt(stringDats,16);
+                         console.log(intDats);
+                         
 
 
                       // toExponential()                                               	Returns a string value for a number in exponential notation.
+                  ///    num.toExponential(fractionDigits) //syntax of toExponential()
+console.log((12434).toExponential(1));// same to exponential there if we give there out theyput number
 
-
+console.log(1.24e4);
 
                        //toFixed()	                                                    Returns a string value for a number in fixed-point notation.
-
-
-
+console.log((12.74).toFixed(0));
+console.log((199.7686).toFixed(2))
+console.log((195e4).toFixed(4));
+console.log(typeof(1.23443).toFixed(3));
                     //toPrecision()	                                                    Returns a string value for a number to a specified precision.
+                    let topre = 123.456;
+                    console.log(topre.toPrecision(5)); // "123.46" (5 digits total)
 
+                    let bigNum = 1234.567;
+                     console.log(bigNum.toPrecision(3)); // "1.23e+3" (scientific notation)
 
-
+                     let smallNum = 7.89;
+console.log(smallNum.toPrecision(5)); // "7.8900" (padded with zeros)
                     //toString()                                                     	Returns a string value in a specified radix (base).
+//toString() is a fundamental method in JavaScript that converts a value to its string representation.
+console.log((43).toString());//number to string.
+console.log((true).toString());  // boolean to string 
+console.log(["pravin","purohit"].toString());//array to string
+console.log({name: "pravin", age :"21"}.toString()); //object to string
 
-
-
-                     //valueOf()	                                                    Returns the number's value.
-
-
+console.log((10).toString(2));  // "1010" (binary)
+console.log((10).toString(8));  // "12" (octal)
+console.log((10).toString(16)); // "a" (hexadecimal)
 
                     //toLocaleString()	                                                Returns a string with a language-sensitive representation of a number.
+                    let LO = 1234567.89;
+
+                    console.log(LO.toLocaleString()); 
+                    // US: "1,234,567.89"
+                    let date = new Date();
+
+console.log(date.toLocaleString('en-US'));
+// DATE and time acondingh to us
+
+console.log(date.toLocaleString('in-IN'));
+// date AND TIME ADDODING TO INDIA
 
 
-   
+
+                     //More on JavaScript Numbers
+                     //+ Operator With Numbers
+                     console.log(typeof("5"+3));
+                     console.log(typeof(5+3));
+
+
+                    // Numeric Operations on Numeric Strings   // when we use number string operations on numeric java stript is auto converted to a number 
+                    console.log(typeof("0"-10));
+                    console.log(typeof("10"-0));
+                    console.log(typeof("10"*3));
+                    console.log(typeof("10"/4));
+
+
+                     //JavaScript Precision Problems     //In JavaScript, numbers (especially decimals) aren't always stored accurately, leading to precision problems
+       let preci = 0.1 + 0.2;
+      console.log(preci.toFixed(2)); // 0.30     sulution of the problem is use toFixed() method
+                     //JavaScript Number() Function
+                     console.log(Number("23"));
+                     let tru = false;
+                     let N=Number(tru);
+                     console.log(N);
+
+                     //Number Objects             //In JavaScript, numbers can be represented either as primitive values or as instances of the Number object. we can conveted number to object usig new 
+
+                     console.log(new Number(10));   //object type

@@ -110,7 +110,7 @@ console.log(chet.charAt(1).toUpperCase());
 //concat()	                                                                            // Joins two or more strings.
 // example
 let stringjoin = "make from";
-let joinstring = stringjoin.concat(" this line ", "help", "of the concat");
+let joinstring = stringjoin.concat(" this line ", "help", " of the concat");
 console.log(joinstring);
 
 
