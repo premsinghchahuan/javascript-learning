@@ -84,3 +84,20 @@ console.log(toString(sym1));
 let vale= true;
 let value4 = vale.valueOf(false);
 console.log(value4);
+
+
+//Properties	                             Description
+//asyncIterator	                       Returns the default AsyncIterator for an object
+
+//hasInstance	                       Determines if a constructor object recognizes an object as its instance
+//isConcatSpreadable	Indicates if an object should be flattened to its array elements
+//iterator	Returns the default iterator for an object
+//match	Matches against a string
+//matchAll	Returns an iterator that yields matches of the regular expression against a string
+//replace	Replaces matched substrings of a string
+//search	Returns the index within a string that matches the regular expression
+//split	Splits a string at the indices that match a regular expression
+//species	Creates derived objects
+//toPrimitive	Converts an object to a primitive value
+//toStringTag	Gives the default description of an object
+//description	Returns a string containing the description of the symbol
